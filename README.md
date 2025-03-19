@@ -1,99 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Notes App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      margin: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    textarea {
-      width: 100%;
-      height: 100px;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    button {
-      padding: 10px 15px;
-      font-size: 16px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-    .note {
-      background: #fff;
-      padding: 10px;
-      margin-top: 10px;
-      border-left: 5px solid #007BFF;
-    }
-    .delete-btn {
-      color: red;
-      cursor: pointer;
-      float: right;
-    }
-  </style>
-</head>
-<body>
+*Hello to my page.
+*here is a content for English server
 
-  <h1>Notes App</h1>
-  <textarea id="noteInput" placeholder="Write your note here..."></textarea>
-  <br>
-  <button onclick="addNote()">Save Note</button>
-  <button onclick="clearNotes()">Clear All Notes</button>
+---
 
-  <div id="notesContainer"></div>
+Introduction to ICT (Information and Communication Technology)
 
-  <script>
-    // Load notes from localStorage on page load
-    window.onload = function() {
-      loadNotes();
-    };
+What is ICT?
 
-    function addNote() {
-      const noteText = document.getElementById("noteInput").value.trim();
-      if (noteText === "") return alert("Please write something!");
-      
-      let notes = JSON.parse(localStorage.getItem("notes")) || [];
-      notes.push(noteText);
-      localStorage.setItem("notes", JSON.stringify(notes));
-      document.getElementById("noteInput").value = "";
-      loadNotes();
-    }
+ICT stands for Information and Communication Technology. It refers to all technologies used to handle telecommunications, broadcast media, intelligent building management systems, audiovisual processing and transmission systems, and network-based control and monitoring functions. In simple terms, ICT includes any product that stores, retrieves, manipulates, transmits, or receives information electronically.
 
-    function loadNotes() {
-      const notesContainer = document.getElementById("notesContainer");
-      notesContainer.innerHTML = "";
-      let notes = JSON.parse(localStorage.getItem("notes")) || [];
 
-      notes.forEach((note, index) => {
-        const noteDiv = document.createElement("div");
-        noteDiv.className = "note";
-        noteDiv.innerHTML = `
-          ${note}
-          <span class="delete-btn" onclick="deleteNote(${index})">Delete</span>
-        `;
-        notesContainer.appendChild(noteDiv);
-      });
-    }
+---
 
-    function deleteNote(index) {
-      let notes = JSON.parse(localStorage.getItem("notes")) || [];
-      notes.splice(index, 1);
-      localStorage.setItem("notes", JSON.stringify(notes));
-      loadNotes();
-    }
+Examples of ICT Tools
 
-    function clearNotes() {
-      if (confirm("Are you sure you want to delete all notes?")) {
-        localStorage.removeItem("notes");
-        loadNotes();
-      }
-    }
-  </script>
+Computers and Laptops
 
-</body>
-</html>
+Mobile Phones and Tablets
+
+Internet and Wi-Fi
+
+Email and Social Media Platforms
+
+Multimedia Devices (TVs, projectors)
+
+Cloud Computing Services
+
+Video Conferencing Tools (Zoom, Google Meet)
+
+
+
+---
+
+Importance of ICT
+
+1. Improves Communication: ICT allows faster and more efficient communication through emails, messaging apps, and video calls.
+
+
+2. Boosts Education: Students and teachers can access online resources, e-learning platforms, and virtual classrooms.
+
+
+3. Enhances Business Operations: ICT tools enable online transactions, digital marketing, and efficient data management.
+
+
+4. Healthcare Support: Electronic medical records, telemedicine, and health monitoring devices are powered by ICT.
+
+
+5. Promotes Globalization: ICT connects people around the world, enabling cultural exchange and global collaboration.
+
+
+
+
+---
+
+Challenges of ICT
+
+Cybersecurity Threats: Risk of data breaches and cyber-attacks.
+
+Digital Divide: Not everyone has access to ICT tools or internet connectivity.
+
+Technological Obsolescence: Devices and software can become outdated quickly.
+
+Privacy Issues: Handling of personal information requires careful regulation.
+
+
+
+---
+
+Conclusion
+
+ICT has become an essential part of modern life, transforming how we work, learn, and communicate. As technology continues to evolve, ICT will play an even more critical role in shaping the future of society.
+
+
+---
+
+
+
